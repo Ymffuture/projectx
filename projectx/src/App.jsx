@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import axios from "axios";
 import Weather from "./componets/XWeather";
+import Footer from "./componets/Footer";
 
 function App() {
   const [data, setData] = useState({});
@@ -26,6 +27,8 @@ function App() {
     }
   };
   return (
+    <>
+   
     <div className="bg-gradient-to-l from-red-900 rounded-xl m-auto px-8 top-[20%] h-900">
     <div className="w-full h-full relative">
       <div className="text-center p-4">
@@ -41,6 +44,8 @@ function App() {
       <Weather weatherData={data} />
     </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 
