@@ -28,23 +28,22 @@ function App() {
   };
   return (
     <>
-   
-    <div className="bg-gradient-to-l from-red-900 rounded-xl m-auto px-8 top-[20%] h-900">
-    <div className="w-full h-full relative">
-      <div className="text-center p-4">
-        <input
-          type="text"
-          className="h-12 py-3 px-6 w-[600px] text-lg rounded-3xl border border-red-600 text-green-500 placeholder:text-yellow-800 focus:outline-none bg-white-600/100 shadow-md"
-          placeholder="Enter your city"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-          onKeyDownCapture={searchCity}
-        />
+      <div className="bg-gradient-to-l from-red-700 rounded-xl m-auto px-8 relative top-[10%] h-auto ">
+        <div className="w-full h-full flex flex-col items-center justify-center ">
+          <div className="text-center p-4">
+            <input
+              type="text"
+              className="h-16 py-3 px-6 w-[450px] text-lg rounded-3xl border border-red-600 text-blue-800 text-bold uppercase  placeholder:text-yellow-800 focus:outline-none bg-white-600/100 shadow-md"
+              placeholder="Enter your Location here..."
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              onKeyDownCapture={searchCity}
+            />
+          </div>
+          <Weather weatherData={data} />
+        </div>
       </div>
-      <Weather weatherData={data} />
-    </div>
-    </div>
-    <Footer/>
+      <Footer />
     </>
   );
 }
